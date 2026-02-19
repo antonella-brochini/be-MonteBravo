@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.monteBravo.be.entity</OriginalElement>
+  <nodes>
+    <node x="-1914.5" y="1183.0">com.monteBravo.be.entity.PedidoProducto</node>
+    <node x="-1759.0" y="761.0">com.monteBravo.be.entity.Usuario</node>
+    <node x="-1942.0" y="489.0">com.monteBravo.be.entity.CarritoProducto</node>
+    <node x="-1927.5" y="1089.0">com.monteBravo.be.entity.Pedido</node>
+    <node x="-1926.5" y="369.0">com.monteBravo.be.entity.Carrito</node>
+    <node x="-1728.0" y="969.0">com.monteBravo.be.entity.Administrador</node>
+    <node x="-1712.5" y="489.0">com.monteBravo.be.entity.CategoriaProducto</node>
+    <node x="-1603.5" y="745.0">com.monteBravo.be.entity.MovimientoStock</node>
+    <node x="-2178.5" y="736.0">com.monteBravo.be.entity.OpinionProducto</node>
+    <node x="-1883.5" y="969.0">com.monteBravo.be.entity.Cliente</node>
+    <node x="-1506.5" y="629.0">com.monteBravo.be.entity.Producto</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.monteBravo.be.entity.Cliente" target="com.monteBravo.be.entity.Carrito" relationship="TO_ONE">
+      <point x="-26.25" y="-14.0" />
+      <point x="-1857.25" y="955.0" />
+      <point x="-1975.0" y="955.0" />
+      <point x="-1975.0" y="463.0" />
+      <point x="-1875.0" y="463.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="com.monteBravo.be.entity.Producto" target="com.monteBravo.be.entity.CarritoProducto" relationship="TO_MANY">
+      <point x="0.0" y="-14.0" />
+      <point x="-1446.0" y="443.0" />
+      <point x="-1855.0" y="443.0" />
+      <point x="0.0" y="-14.0" />
+    </edge>
+    <edge source="com.monteBravo.be.entity.OpinionProducto" target="com.monteBravo.be.entity.Producto" relationship="TO_ONE">
+      <point x="0.0" y="-14.0" />
+      <point x="-2089.0" y="583.0" />
+      <point x="-1446.0" y="583.0" />
+      <point x="0.0" y="-14.0" />
+    </edge>
+    <edge source="com.monteBravo.be.entity.Cliente" target="com.monteBravo.be.entity.Usuario" relationship="GENERALIZATION">
+      <point x="26.25" y="-14.0" />
+      <point x="-1804.75" y="889.0" />
+      <point x="-1731.5" y="889.0" />
+      <point x="-27.5" y="14.0" />
+    </edge>
+    <edge source="com.monteBravo.be.entity.MovimientoStock" target="com.monteBravo.be.entity.Producto" relationship="TO_ONE">
+      <point x="0.0" y="-14.0" />
+      <point x="-1512.0" y="703.0" />
+      <point x="-1815.0" y="703.0" />
+      <point x="-1815.0" y="583.0" />
+      <point x="-1446.0" y="583.0" />
+      <point x="0.0" y="-14.0" />
+    </edge>
+    <edge source="com.monteBravo.be.entity.Producto" target="com.monteBravo.be.entity.CategoriaProducto" relationship="TO_ONE">
+      <point x="0.0" y="-14.0" />
+      <point x="-1446.0" y="563.0" />
+      <point x="-1615.0" y="563.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="com.monteBravo.be.entity.PedidoProducto" target="com.monteBravo.be.entity.Pedido" relationship="TO_ONE">
+      <point x="0.0" y="-14.0" />
+      <point x="-1827.0" y="1143.0" />
+      <point x="-1875.0" y="1143.0" />
+      <point x="0.0" y="-14.0" />
+    </edge>
+    <edge source="com.monteBravo.be.entity.PedidoProducto" target="com.monteBravo.be.entity.Producto" relationship="TO_ONE">
+      <point x="0.0" y="-14.0" />
+      <point x="-1827.0" y="1143.0" />
+      <point x="-1446.0" y="1143.0" />
+      <point x="0.0" y="-14.0" />
+    </edge>
+    <edge source="com.monteBravo.be.entity.CarritoProducto" target="com.monteBravo.be.entity.Carrito" relationship="TO_ONE">
+      <point x="0.0" y="-14.0" />
+      <point x="-1855.0" y="463.0" />
+      <point x="-1875.0" y="463.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="com.monteBravo.be.entity.Cliente" target="com.monteBravo.be.entity.OpinionProducto" relationship="TO_MANY">
+      <point x="-26.25" y="-14.0" />
+      <point x="-1857.25" y="923.0" />
+      <point x="-1935.0" y="923.0" />
+      <point x="-1935.0" y="763.0" />
+      <point x="-2089.0" y="763.0" />
+      <point x="0.0" y="-14.0" />
+    </edge>
+    <edge source="com.monteBravo.be.entity.MovimientoStock" target="com.monteBravo.be.entity.Usuario" relationship="TO_ONE">
+      <point x="0.0" y="-14.0" />
+      <point x="-1512.0" y="836.0" />
+      <point x="-1676.5" y="836.0" />
+      <point x="27.5" y="14.0" />
+    </edge>
+    <edge source="com.monteBravo.be.entity.Administrador" target="com.monteBravo.be.entity.Usuario" relationship="GENERALIZATION">
+      <point x="0.0" y="-14.0" />
+      <point x="-1648.0" y="889.0" />
+      <point x="-1731.5" y="889.0" />
+      <point x="-27.5" y="14.0" />
+    </edge>
+    <edge source="com.monteBravo.be.entity.Pedido" target="com.monteBravo.be.entity.Cliente" relationship="TO_ONE">
+      <point x="0.0" y="-14.0" />
+      <point x="-1875.0" y="1090.0" />
+      <point x="-1857.25" y="1090.0" />
+      <point x="-26.25" y="-14.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Compact" zoom="1.0" showDependencies="true" x="-1715.0" y="707.5" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
