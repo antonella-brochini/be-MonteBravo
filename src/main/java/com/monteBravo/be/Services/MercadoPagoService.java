@@ -33,6 +33,10 @@ public class MercadoPagoService {
     @Value("${mercadopago.claveSecretaMP}")
     private String claveSecretaMP;
 
+    @Value("${frontend.url}")
+    private String frontendUrl;
+
+
     @PostConstruct
     public void init() {
         MercadoPagoConfig.setAccessToken(accessToken);
@@ -60,9 +64,9 @@ public class MercadoPagoService {
     }
 
     PreferenceBackUrlsRequest backUrls = PreferenceBackUrlsRequest.builder()
-            .success("https://fe-montebravo.onrender.com/user/carrito/resultadoCompra/exito")
-            .pending("https://fe-montebravo.onrender.com/user/carrito/resultadoCompra/pendiente")
-            .failure("https://fe-montebravo.onrender.com/resultadoCompra/fallo")
+            .success(frontendUrl+"/user/carrito/resultadoCompra/exito")
+            .pending(frontendUrl+"/user/carrito/resultadoCompra/pendiente")
+            .failure(frontendUrl+"/resultadoCompra/fallo")
             .build();
 
 
