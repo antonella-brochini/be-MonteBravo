@@ -20,7 +20,9 @@ jobs:
           java-version: '21'
 
       - name: Build jar
-        run: ./mvnw clean package -DskipTests
+        run: |
+          chmod +x ./mvnw
+          ./mvnw clean package -DskipTests
 
       - name: Rename jar
         run: cp target/be-0.0.1-SNAPSHOT.jar app.jar
