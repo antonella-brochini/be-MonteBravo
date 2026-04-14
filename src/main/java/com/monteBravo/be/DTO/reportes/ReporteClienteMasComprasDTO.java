@@ -1,5 +1,8 @@
 package com.monteBravo.be.DTO.reportes;
 
+/**
+ * Mapea filas de {@code obtenerClientesConMasCompras} (vista {@code reporte_clientes_compras}).
+ */
 public class ReporteClienteMasComprasDTO {
 
     private long idCliente;
@@ -7,11 +10,11 @@ public class ReporteClienteMasComprasDTO {
     private long totalCompras;
     private Double totalGastos;
 
-    public ReporteClienteMasComprasDTO(Object[] row){
-        this.idCliente = (long) row[0];
-        this.nombreCliente = (String) row[1];
-        this.totalCompras = (long) row[2];
-        this.totalGastos = (Double) row[3];
+    public ReporteClienteMasComprasDTO(Object[] row) {
+        this.idCliente = row[0] == null ? 0L : ((Number) row[0]).longValue();
+        this.nombreCliente = row[1] == null ? null : row[1].toString();
+        this.totalCompras = row[2] == null ? 0L : ((Number) row[2]).longValue();
+        this.totalGastos = row[3] == null ? null : ((Number) row[3]).doubleValue();
     }
 
     public long getIdCliente() {

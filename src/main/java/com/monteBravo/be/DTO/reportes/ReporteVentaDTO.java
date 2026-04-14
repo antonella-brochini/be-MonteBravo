@@ -1,5 +1,8 @@
 package com.monteBravo.be.DTO.reportes;
 
+/**
+ * Mapea filas de {@code obtenerVentasPorRangoFechas} (vista {@code reporte_vta}).
+ */
 public class ReporteVentaDTO {
     private String nombreUsuario;
     private Long idPedido;
@@ -9,16 +12,14 @@ public class ReporteVentaDTO {
     private String nombreProducto;
     private String fechaCompra;
 
-
-    // Constructor
     public ReporteVentaDTO(Object[] row) {
-        this.nombreUsuario = (String) row[0];
-        this.idPedido = ((Number) row[1]).longValue();
-        this.cantidad = ((Number) row[2]).intValue();
-        this.precio = ((Number) row[3]).doubleValue();
-        this.idProducto = ((Number) row[4]).longValue();
-        this.nombreProducto = (String) row[5];
-        this.fechaCompra = row[6].toString();
+        this.nombreUsuario = row[0] == null ? null : row[0].toString();
+        this.idPedido = row[1] == null ? null : ((Number) row[1]).longValue();
+        this.cantidad = row[2] == null ? null : ((Number) row[2]).intValue();
+        this.precio = row[3] == null ? null : ((Number) row[3]).doubleValue();
+        this.idProducto = row[4] == null ? null : ((Number) row[4]).longValue();
+        this.nombreProducto = row[5] == null ? null : row[5].toString();
+        this.fechaCompra = row[6] == null ? null : row[6].toString();
     }
 
     public Long getIdPedido() {
